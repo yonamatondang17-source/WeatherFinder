@@ -1,36 +1,37 @@
-<div align="center">
-🌤️ WeatherFinder
-Aplikasi cuaca modern berbasis React Native + Expo
-Cari kondisi cuaca kota manapun di dunia — real-time, cepat, dan elegan.
-<br/>
-Tampilkan Gambar
-Tampilkan Gambar
-Tampilkan Gambar
-Tampilkan Gambar
-</div>
+# 🌤️ WeatherFinder
 
-✨ Fitur
+> Aplikasi cuaca modern berbasis React Native + Expo — cari kondisi cuaca kota manapun di dunia, real-time, cepat, dan elegan.
 
-🔍 Pencarian real-time — hasil muncul otomatis saat mengetik (debounce 500ms)
-🌡️ Data cuaca lengkap — suhu, maks/min, kecepatan angin, arah angin, curah hujan
-🌅 Sunrise & Sunset — waktu matahari terbit dan terbenam sesuai kota
-🕓 Riwayat pencarian — simpan 5 kota terakhir yang pernah dicari
-🌙 Mode siang/malam — tampilan & warna berubah otomatis sesuai waktu lokal kota
-🔄 Pull to refresh — perbarui data cuaca dengan tarik layar ke bawah
-⚡ Abort controller — request lama otomatis dibatalkan saat pencarian baru dimulai
+![React Native](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Expo](https://img.shields.io/badge/Expo-000020?style=for-the-badge&logo=expo&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![Open-Meteo](https://img.shields.io/badge/Open--Meteo_API-00897B?style=for-the-badge&logo=cloudflareworkers&logoColor=white)
 
+---
 
-📱 Tampilan
-<div align="center">
-<img src="scripts/Screenshot 2026-06-06 013220.png" width="30%" />
-<img src="scripts/Screenshot 2026-06-06 013233.png" width="30%" />
-<img src="scripts/Screenshot 2026-06-06 013243.png" width="30%" />
-</div>
+## 📱 Tampilan
 
-Tema gelap deep navy dengan accent biru (siang) dan ungu (malam).
+| Home | Loading | Hasil Cuaca |
+|:----:|:-------:|:-----------:|
+| ![home](scripts/Screenshot%202026-06-06%20013220.png) | ![loading](scripts/Screenshot%202026-06-06%20013233.png) | ![result](scripts/Screenshot%202026-06-06%20013243.png) |
 
+---
 
-🗂️ Struktur Proyek
+## ✨ Fitur
+
+- 🔍 **Pencarian real-time** — hasil muncul otomatis saat mengetik (debounce 500ms)
+- 🌡️ **Data cuaca lengkap** — suhu, maks/min, kecepatan angin, arah angin, curah hujan
+- 🌅 **Sunrise & Sunset** — waktu matahari terbit dan terbenam sesuai kota
+- 🕓 **Riwayat pencarian** — simpan 5 kota terakhir yang pernah dicari
+- 🌙 **Mode siang/malam** — tampilan & warna berubah otomatis sesuai waktu lokal kota
+- 🔄 **Pull to refresh** — perbarui data cuaca dengan tarik layar ke bawah
+- ⚡ **Abort controller** — request lama otomatis dibatalkan saat pencarian baru dimulai
+
+---
+
+## 🗂️ Struktur Proyek
+
+```
 WeatherFinder/
 ├── app/
 │   └── (tabs)/
@@ -44,33 +45,68 @@ WeatherFinder/
 │   └── utils/
 │       └── weatherHelper.ts   # Fungsi fetch & helper cuaca
 └── README.md
+```
 
-🚀 Cara Menjalankan
-1. Clone repo
-bashgit clone https://github.com/yonamatondang17-source/WeatherFinder.git
+---
+
+## 🚀 Cara Menjalankan
+
+### 1. Clone repo
+
+```bash
+git clone https://github.com/yonamatondang17-source/WeatherFinder.git
 cd WeatherFinder
-2. Install dependencies
-bashnpm install
-3. Install Expo dependencies
-bashnpx expo install expo-linear-gradient
-4. Jalankan aplikasi
-bashnpx expo start
-Scan QR code dengan aplikasi Expo Go di HP kamu, atau tekan:
+```
 
-a → buka di Android Emulator
-i → buka di iOS Simulator
+### 2. Install dependencies
 
+```bash
+npm install
+```
 
-🌐 API yang Digunakan
-APIKegunaanDokumentasiOpen-Meteo ForecastData cuaca real-time & hariandocsOpen-Meteo GeocodingKonversi nama kota → koordinatdocs
+### 3. Install Expo dependencies
 
-Kedua API gratis dan tanpa API key — tidak perlu konfigurasi tambahan.
+```bash
+npx expo install expo-linear-gradient
+```
 
+### 4. Jalankan aplikasi
 
-🛠️ Tech Stack
-TeknologiVersiKeteranganReact Native0.76+Framework mobileExpo52+Build & development toolchainTypeScript5+Type safetyexpo-linear-gradientlatestGradient background & card
+```bash
+npx expo start
+```
 
-📦 Data Cuaca yang Ditampilkan
+Scan QR code dengan aplikasi **Expo Go** di HP kamu, atau tekan:
+- `a` → buka di Android Emulator
+- `i` → buka di iOS Simulator
+
+---
+
+## 🌐 API yang Digunakan
+
+| API | Kegunaan | Dokumentasi |
+|-----|----------|-------------|
+| [Open-Meteo Forecast](https://api.open-meteo.com) | Data cuaca real-time & harian | [docs](https://open-meteo.com/en/docs) |
+| [Open-Meteo Geocoding](https://geocoding-api.open-meteo.com) | Konversi nama kota → koordinat | [docs](https://open-meteo.com/en/docs/geocoding-api) |
+
+> Kedua API **gratis** dan **tanpa API key** — tidak perlu konfigurasi tambahan.
+
+---
+
+## 🛠️ Tech Stack
+
+| Teknologi | Versi | Keterangan |
+|-----------|-------|------------|
+| React Native | 0.76+ | Framework mobile |
+| Expo | 52+ | Build & development toolchain |
+| TypeScript | 5+ | Type safety |
+| expo-linear-gradient | latest | Gradient background & card |
+
+---
+
+## 📦 Data Cuaca yang Ditampilkan
+
+```
 current_weather:
   ├── temperature      → Suhu saat ini (°C)
   ├── weathercode      → Kode kondisi cuaca (WMO)
@@ -84,11 +120,14 @@ daily[0]:
   ├── precipitation_sum    → Total curah hujan (mm)
   ├── sunrise              → Waktu matahari terbit
   └── sunset               → Waktu matahari terbenam
+```
 
-👤 Author
-Yona Matondang
-@yonamatondang17-source
+---
 
-<div align="center">
-Made with ☕ and React Native
-</div>
+## 👤 Author
+
+**Yona Matondang** — [@yonamatondang17-source](https://github.com/yonamatondang17-source)
+
+---
+
+*Made with ☕ and React Native*
